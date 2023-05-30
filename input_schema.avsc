@@ -1,0 +1,130 @@
+{
+   "type": "record",
+   "name": "inferred_schema",
+   "fields": [
+      {
+         "name": "loan_sequence_number",
+         "type": "string",
+         "dataClass": "categorical",
+         "role": "identifier",
+         "protectedClass": false,
+         "driftCandidate": true,
+         "specialValues": [],
+         "scoringOptional": false
+      },
+      {
+         "name": "current_delinquency_status",
+         "type": [
+            "int",
+            "string"
+         ],
+         "dataClass": "categorical",
+         "role": "predictor",
+         "protectedClass": false,
+         "driftCandidate": true,
+         "specialValues": [],
+         "scoringOptional": false
+      },
+      {
+         "name": "current_int_rate",
+         "type": "double",
+         "dataClass": "numerical",
+         "role": "predictor",
+         "protectedClass": false,
+         "driftCandidate": true,
+         "specialValues": [],
+         "scoringOptional": false
+      },
+      {
+         "name": "actual_loss",
+         "type": "double",
+         "dataClass": "numerical",
+         "role": "label",
+         "protectedClass": false,
+         "driftCandidate": true,
+         "specialValues": [],
+         "scoringOptional": false,
+         "positiveClassLabel": null
+      },
+      {
+         "name": "credit_score",
+         "type": "int",
+         "dataClass": "numerical",
+         "role": "predictor",
+         "protectedClass": false,
+         "driftCandidate": true,
+         "specialValues": [],
+         "scoringOptional": false
+      },
+      {
+         "name": "first_time_homebuyer_flag",
+         "type": "string",
+         "dataClass": "categorical",
+         "role": "predictor",
+         "protectedClass": false,
+         "driftCandidate": true,
+         "specialValues": [],
+         "scoringOptional": false
+      },
+      {
+         "name": "original_upb",
+         "type": "int",
+         "dataClass": "numerical",
+         "role": "predictor",
+         "protectedClass": false,
+         "driftCandidate": true,
+         "specialValues": [],
+         "scoringOptional": false
+      },
+      {
+         "name": "original_cltv",
+         "type": "int",
+         "dataClass": "numerical",
+         "role": "predictor",
+         "protectedClass": false,
+         "driftCandidate": true,
+         "specialValues": [],
+         "scoringOptional": false
+      },
+      {
+         "name": "original_dti_ratio",
+         "type": "int",
+         "dataClass": "numerical",
+         "role": "predictor",
+         "protectedClass": false,
+         "driftCandidate": true,
+         "specialValues": [],
+         "scoringOptional": false
+      },
+      {
+         "name": "original_int_rate",
+         "type": "double",
+         "dataClass": "numerical",
+         "role": "predictor",
+         "protectedClass": false,
+         "driftCandidate": true,
+         "specialValues": [],
+         "scoringOptional": false
+      },
+      {
+         "name": "property_state",
+         "type": "string",
+         "dataClass": "categorical",
+         "role": "predictor",
+         "protectedClass": false,
+         "driftCandidate": true,
+         "specialValues": [],
+         "scoringOptional": false
+      },
+      {
+         "name": "predicted_loss",
+         "type": "double",
+         "dataClass": "numerical",
+         "role": "score",
+         "protectedClass": false,
+         "driftCandidate": true,
+         "specialValues": [],
+         "scoringOptional": false
+      }
+   ]
+}
