@@ -1,0 +1,26 @@
+{
+   "type": "record",
+   "name": "inferred_schema",
+   "fields": [
+      {
+         "name": "loan_sequence_number",
+         "type": "string",
+         "dataClass": "categorical",
+         "role": "identifier",
+         "protectedClass": false,
+         "driftCandidate": true,
+         "specialValues": [],
+         "scoringOptional": false
+      },
+      {
+         "name": "predicted_loss",
+         "type": "double",
+         "dataClass": "numerical",
+         "role": "score",
+         "protectedClass": false,
+         "driftCandidate": true,
+         "specialValues": [],
+         "scoringOptional": false
+      }
+   ]
+}

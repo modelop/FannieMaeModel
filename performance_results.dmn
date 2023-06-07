@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_0clwta9" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="4.8.1">
+  <decision id="Decision_0vn1ax8" name="Performance Results">
+    <decisionTable id="DecisionTable_0kn513m" hitPolicy="COLLECT">
+      <input id="Input_1" label="mae" camunda:inputVariable="mae">
+        <inputExpression id="InputExpression_1" typeRef="double">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_14v8dj2" label="r2_score" camunda:inputVariable="r2_score">
+        <inputExpression id="LiteralExpression_11h1jfb" typeRef="double">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0x9yb6f" label="rmse" camunda:inputVariable="rmse">
+        <inputExpression id="LiteralExpression_0f6o7y7" typeRef="double">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="passes" name="passes" typeRef="string" />
+      <output id="OutputClause_1xw4oqa" label="reason" name="reason" typeRef="string" />
+      <rule id="DecisionRule_0yoxyga">
+        <inputEntry id="UnaryTests_11609n2">
+          <text>if &lt;0 or &gt;10 then true else false</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ag6sui">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pnv98e">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0d4e4d1">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_17557ks">
+          <text>"mae is outside of the expected range"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_05zznma">
+        <description></description>
+        <inputEntry id="UnaryTests_0rykquo">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1kxrcjw">
+          <text>&lt;=0.7</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02py13i">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1jssr4l">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1l9znxl">
+          <text>"R Squared is below the acceptable threshold of 0.7"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0cg9wg6">
+        <inputEntry id="UnaryTests_16tg1a9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_102b5f4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wgv4tp">
+          <text>&gt;0.2</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_16xbcew">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_156jg8p">
+          <text>"RMSE is above the accepable threshold of 0.2"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Decision_0vn1ax8">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
